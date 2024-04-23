@@ -1,0 +1,11 @@
+{
+ "compilerOptions": {
+    "module": "ESNext", // or "ES2020"
+    "target": "ESNext", // or a version that suits your needs
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true
+ }
+}
