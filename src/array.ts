@@ -1,11 +1,17 @@
 /**
- * @returns {boolean} Check if variable is an Array
+ * Check if the given variable is an array
+ * @param {any} variable - The variable to check if it is an array
+ * @returns {boolean} True if the variable is an array, false otherwise
  */
+
 export const isArr = (variable: any): boolean => Array.isArray(variable);
 
 /**
- * @returns {boolean} Checks if an array is empty
+ * Check if the given array is empty
+ * @param {any[]} arr - The array to check for emptiness
+ * @returns {boolean} True if the array is empty, false otherwise
  */
+
 export const isArrEmpty = (arr: any[]): boolean => arr.length === 0;
 
 /**

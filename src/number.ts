@@ -1,8 +1,8 @@
 /**
- * Format a number to a fixed precision
- * @param num The number to be formatted
- * @param precision The number of decimal places to round to
- * @returns The formatted number as a string
+ * Format a number to a specified precision
+ * @param {number} num - The input number to format
+ * @param {number} precision - The number of decimal places to round to
+ * @returns {string} The formatted number with the specified precision
  */
 
 export const toFixed = (num: number, precision: number) =>
@@ -10,8 +10,8 @@ export const toFixed = (num: number, precision: number) =>
 
 /**
  * Parse a number string or number and return its float, integer, and sign
- * @param num The input number or number string to be parsed
- * @returns An object with the following properties:
+ * @param {string | number} num - The input number or string to parse
+ * @returns {object} An object containing the following  properties:
  *   - float: The absolute value of the parsed float
  *   - int: The absolute value of the parsed integer
  *   - sign: The sign of the number as a string ("-" or "")
@@ -128,12 +128,11 @@ export const addSeparators = (
 };
 
 /**
- * 123456 => '123,456'
- *
- * @params {string, number} options
- * @params {string} format
- * @params {object} options
- *
+ * Format a number or string into a specified format with separators and units
+ * @param {string | number} value - The input value to be formatted
+ * @param {string} format - The format string specifying the desired format (default: "0")
+ * @param {Record<string, any>} options - Additional options for customizing the formatting
+ * @returns {string} The formatted number or string based on the specified format
  */
 
 export const formatNumber = (
@@ -174,7 +173,10 @@ export const formatNumber = (
 };
 
 /**
- * @returns {number} Returns zero or provided min instead of NAN or just return number
+ * Ensures the input value is a valid number, returning the minimum value if the input is invalid
+ * @param {any} value - The input value to be converted to a number
+ * @param {number | null} min - The minimum value to return if the input is invalid (default: null)
+ * @returns {number} The valid number based on the input value and minimum value
  */
 
 export const ensureNumber = (value: any, min: number | null = null): number => {
@@ -192,8 +194,10 @@ export const ensureNumber = (value: any, min: number | null = null): number => {
 };
 
 /**
- * @param {string} value
- * @returns {any} Returns a default value set for when a value is zero or NAN.
+ * Handles the display of numeric values, providing a fallback format for "empty" or invalid values.
+ * @param {string | number} value - The input value to be displayed.
+ * @param {any} format - The fallback format to use when the input value is considered "empty" or invalid (default: "---").
+ * @returns {any} The formatted value or the fallback format.
  */
 
 export const numberEmptyState = (

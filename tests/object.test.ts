@@ -9,7 +9,7 @@ import {
   sortByKeyLength,
   hasKeysAndValues,
   parseNumValues,
-  parseNumber,
+  parseNumericObj,
   querylize,
   reserveKeys,
 } from "../src/object";
@@ -372,8 +372,8 @@ describe("querylize function", () => {
   });
 });
 
-//* tests for the parseNumber function
-describe("parseNumber function", () => {
+//* tests for the parseNumericObj function
+describe("parseNumericObj function", () => {
   test("should parse numeric strings to numbers in the object", () => {
     const obj = {
       age: "30",
@@ -381,7 +381,7 @@ describe("parseNumber function", () => {
       weight: "75.5",
       name: "John Doe",
     };
-    const parsedObj = parseNumber(obj);
+    const parsedObj = parseNumericObj(obj);
 
     expect(parsedObj).toEqual({
       age: 30,
@@ -398,7 +398,7 @@ describe("parseNumber function", () => {
       weight: "75.5",
       name: "John Doe",
     };
-    const parsedObj = parseNumber(obj);
+    const parsedObj = parseNumericObj(obj);
 
     expect(parsedObj).toEqual({
       age: 30,
@@ -410,7 +410,7 @@ describe("parseNumber function", () => {
 
   test("should handle empty object", () => {
     const obj = {};
-    const parsedObj = parseNumber(obj);
+    const parsedObj = parseNumericObj(obj);
 
     expect(parsedObj).toEqual({});
   });
@@ -422,7 +422,7 @@ describe("parseNumber function", () => {
       weight: "75.5",
       name: "John Doe",
     };
-    const parsedObj = parseNumber(obj);
+    const parsedObj = parseNumericObj(obj);
 
     expect(parsedObj).toEqual({
       age: 30,

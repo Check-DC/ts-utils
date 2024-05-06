@@ -1,6 +1,8 @@
 /**
- * Cleanly parse a string to JSON object value if an error is discovered
- * @returns {Record<string, any> | Array} Parsed JSON
+ * Parse a JSON string into a specified type, with a default value if parsing fails or input is null
+ * @param {string | null} str - The JSON string to parse
+ * @param {any} defaultVal - The default value to return if parsing fails or input is null (default: [])
+ * @returns {T} The parsed JSON data of type T or the default value
  */
 
 export const parseJSON = <T>(str: string | null, defaultVal: any = []): T => {
@@ -15,16 +17,21 @@ export const parseJSON = <T>(str: string | null, defaultVal: any = []): T => {
 };
 
 /**
- * Deep clones an object without keeping reference
- * @returns {T} Inherits type of the given obj
+ * Create a deep clone of a given object, including nested objects and arrays
+ * @param {T | Record<string, any> | null} obj - The object to be deep cloned
+ * @returns {T} A deep copy of the input object
  */
+
 export const deepClone = <T extends Record<string, any>>(
   obj: T | Record<string, any> | null
 ): T => (obj === null ? ({} as T) : parseJSON(JSON.stringify(obj), {}));
+
 /**
- * Parse all number values in an object
- * @returns {Record<string, any>} Object with numbers parsed
+ * Recursively parse the values of an object, converting any numeric string values to numbers
+ * @param {object} obj - The input object to be parsed
+ * @returns {object} A new object with numeric string values converted to numbers
  */
+
 export const parseNumValues = (obj: {
   [key: string]: any;
 }): { [key: string]: any } => {
@@ -43,9 +50,12 @@ export const parseNumValues = (obj: {
 };
 
 /**
- * Removes empty keys in an object
- * @returns {Record<string, any>} Object without falsy keys
+ * Recursively remove keys with null, undefined, or empty string values from an object
+ * @param {Record<string, any>} obj - The input object to remove empty keys from
+ * @param {boolean} shallow - Whether to perform a shallow or deep removal of empty keys (default: false)
+ * @returns {Record<string, any>} The input object with empty keys removed
  */
+
 export const removeEmptyKeys = (
   obj: Record<string, any>,
   shallow = false
@@ -62,18 +72,21 @@ export const removeEmptyKeys = (
 };
 
 /**
- * Cleans a query object for empty values and parse number values
- * @returns {Record<string, any>} Sanitized object
+ * Sanitize a query object by removing empty keys and parsing numeric string values to numbers
+ * @param {Record<string, any>} obj - The query object to be sanitized
+ * @returns {Record<string, any>} The sanitized query object with empty keys removed and numeric values parsed
  */
+
 export const sanitizeQuery = (obj: Record<string, any>): Record<string, any> =>
   parseNumValues(removeEmptyKeys(obj));
 
 /**
- * Removes specified keys from an object and returns the new object
- * without affecting the original object
- * LodashOmit can also be used in place of this
- * @returns {object} Object without keys
+ * Remove specified keys from an object, returning a new object with the keys removed
+ * @param {Record<string, any>} obj - The input object to remove keys from
+ * @param {string[]} keys - The array of keys to remove from the object
+ * @returns {Record<string, any>} A new object with the specified keys removed
  */
+
 export const removeKeys = (
   obj: Record<string, any>,
   keys: string[]
@@ -91,8 +104,12 @@ export const removeKeys = (
 };
 
 /**
- * Mutates and renames an object's key
+ * Rename a key in an object from an old name to a new name
+ * @param {object} obj - The object to rename the key in
+ * @param {string} oldKey - The old name of the key to rename
+ * @param {string} newKey - The new name of the key
  */
+
 export const renameKey = (
   obj: { [key: string]: any },
   oldKey: string,
@@ -109,8 +126,12 @@ export const renameKey = (
 };
 
 /**
- * Renames set of oldKeys to newKeys
+ * Rename multiple keys in an object from old names to new names
+ * @param {object} obj - The object to rename the keys in
+ * @param {string[]} oldKeys - The array of old key names
+ * @param {string[]} newKeys - The array of new key names
  */
+
 export const renameKeys = (
   obj: { [key: string]: any },
   oldKeys: string[],
@@ -123,8 +144,11 @@ export const renameKeys = (
 };
 
 /**
- * Mutate and sort object keys by length shortest to longest
+ * Sort an object's key-value pairs by the length of the values, with ties broken by the lexicographic order of the keys
+ * @param {object} obj - The input object to be sorted
+ * @returns {Array<{ key: string | number, value: any }>} The sorted array of key-value pairs
  */
+
 export const sortByKeyLength = (obj: { [key: string | number]: any }) => {
   return Object.keys(obj)
     .map((k) => ({ key: k, value: obj[k] }))
@@ -137,9 +161,11 @@ export const sortByKeyLength = (obj: { [key: string | number]: any }) => {
 };
 
 /**
- * Convert an object into the query version of itself
- * @returns {string} example: ?age=20&height=10cm
+ * Convert an object into a query string for URL parameters
+ * @param {Record<string, any> | undefined} obj - The input object to be converted to a query string
+ * @returns {string} The query string representation of the input object example: ?age=20&height=10cm
  */
+
 export const querylize = (obj: Record<string, any> | undefined) => {
   if (!obj) return "";
 
@@ -154,7 +180,15 @@ export const querylize = (obj: Record<string, any> | undefined) => {
   return `?${str.join("&")}`;
 };
 
-export const parseNumber = (obj: Record<string, any>): Record<string, any> => {
+/**
+ * Convert numeric string values in an object to numbers, preserving non-numeric values
+ * @param {Record<string, any>} obj - The input object to parse numeric values from
+ * @returns {Record<string, any>} A new object with numeric string values converted to numbers
+ */
+
+export const parseNumericObj = (
+  obj: Record<string, any>
+): Record<string, any> => {
   const res: Record<string, any> = {};
   Object.keys(obj).forEach((key) => {
     if (obj[key])
@@ -164,6 +198,13 @@ export const parseNumber = (obj: Record<string, any>): Record<string, any> => {
   });
   return res;
 };
+
+/**
+ * Create a new object containing only the specified keys from the original object
+ * @param {Record<string, any>} obj - The input object to reserve keys from
+ * @param {string[]} keys - The array of keys to reserve in the new object
+ * @returns {Record<string, any>} A new object containing only the specified keys
+ */
 
 export const reserveKeys = (
   obj: Record<string, any>,
@@ -175,6 +216,13 @@ export const reserveKeys = (
   });
   return newObj;
 };
+
+/**
+ * Check if an object has all the specified keys and if the values associated with those keys are not undefined or null
+ * @param {T} obj - The input object to check
+ * @param {(keyof T)[]} keys - The array of keys to check for
+ * @returns {boolean} True if the object has all the specified keys with non-null, non-undefined values, false otherwise
+ */
 
 export const hasKeysAndValues = <T>(obj: T, keys: (keyof T)[]): boolean => {
   if (obj) {

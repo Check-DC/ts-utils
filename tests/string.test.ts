@@ -7,7 +7,7 @@ import {
   generateUuid,
 } from "../src/string";
 
-//* tests for random string function
+//* tests for randomStr function
 describe("Random String function", () => {
   test("should generate a random string with default options", () => {
     const result = randomStr();
@@ -44,7 +44,7 @@ describe("Random String function", () => {
   });
 });
 
-//* tests for uppecase function
+//* tests for uppercase function
 describe("toUpperCase function", () => {
   test("should convert a string to uppercase", () => {
     const result = toUpperCase("hello world");

@@ -1,8 +1,9 @@
 /**
- * Get time to now
- * @param {string | number | Date | dayjs.Dayjs | null | undefined} date
- * @returns {string} '
+ * Calculate the relative time difference between a given date and the current date
+ * @param {Date | string} date - The date to calculate the relative time for
+ * @returns {string} A human-readable representation of the time elapsed or remaining
  */
+
 export const toNow = (date: Date | string): string => {
   date = new Date(date);
 
@@ -36,14 +37,13 @@ export const toNow = (date: Date | string): string => {
   return "just now";
 };
 
-// Example usage:
-
 /**
- * Formats Date str to given a dateTime format
- * @param {string} date
- * @param {string} format
- * @returns {string} '
+ * Convert a date into a formatted string based on the specified format
+ * @param {Date | string} date - The date to be formatted
+ * @param {string} format - The format string defining the desired date format (default: "YYYY-MM-DD")
+ * @returns {string} The formatted date string based on the specified format
  */
+
 export const formatDate = (
   date: Date | string,
   format: string = "YYYY-MM-DD"
@@ -87,10 +87,11 @@ export const formatDate = (
 };
 
 /**
- * Get time from now
- * @param {string | number | Date | dayjs.Dayjs | null | undefined} date
- * @returns {string}'
+ * Calculate the relative time difference between a given date and the current date for future events
+ * @param {Date | string} date - The date to calculate the relative time for
+ * @returns {string} A human-readable representation of the time remaining from now to the specified date
  */
+
 export const fromNow = (date: Date | string): string => {
   date = new Date(date);
 
