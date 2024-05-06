@@ -10,7 +10,7 @@ import {
 } from "../src/number";
 
 //* tests for toFixed function
-describe("toFixed function", () => {
+describe("toFixed", () => {
   test("should round a number to the specified precision", () => {
     expect(toFixed(3.14159, 2)).toBe("3.14");
   });
@@ -33,7 +33,7 @@ describe("toFixed function", () => {
 });
 
 //* tests for parseNumber function
-describe("parseNumber function", () => {
+describe("parseNumber", () => {
   test("should parse a positive number correctly", () => {
     const result = parseNumber(42.1234);
     expect(result.float).toBe(42.1234);
@@ -199,8 +199,8 @@ describe("addUnit", () => {
   });
 });
 
-//* tests for formatNumber function
-describe("addSeparators function", () => {
+//* tests for addSeparators function
+describe("addSeparators", () => {
   test('should add thousands separator to a number string with base format ""', () => {
     const result = addSeparators("1234567", "", ",", ".");
     expect(result).toBe("1,234,567");
@@ -225,9 +225,30 @@ describe("addSeparators function", () => {
     const result = addSeparators("987654321.1234", "0,0", "|", "-");
     expect(result).toBe("987|654|321-1234");
   });
+
+  test("should add thousands and decimal separators correctly", () => {
+    const result = addSeparators("1234.56789", "0,0", ",", ".");
+    expect(result).toBe("1,234.56789");
+  });
+
+  test("should handle decimal-only numbers correctly", () => {
+    const result = addSeparators(".56789", "0,0", ",", ".");
+    expect(result).toBe(".56789");
+  });
+
+  test("should handle integer-only numbers correctly", () => {
+    const result = addSeparators("1234", "0,0", ",", ".");
+    expect(result).toBe("1,234");
+  });
+
+  test("should handle zero correctly", () => {
+    const result = addSeparators("0", "0,0", ",", ".");
+    expect(result).toBe("0");
+  });
 });
 
-describe("formatNumber function", () => {
+//* tests for formatNumber function
+describe("formatNumber", () => {
   test("should format a number with thousands separator", () => {
     const result = formatNumber("123456", "0", { thousandsSeparator: "," });
     expect(result).toBe("123,456");
@@ -268,7 +289,7 @@ describe("formatNumber function", () => {
 });
 
 //* tests for ensureNumber function
-describe("ensureNumber function", () => {
+describe("ensureNumber", () => {
   test("should return zero for NaN input", () => {
     const result = ensureNumber(NaN);
     expect(result).toBe(0);
