@@ -26,9 +26,10 @@ export const toNow = (date: Date | string): string => {
     const inUnit = Math.floor(distanceInSeconds / seconds);
     if (inUnit >= 1) {
       const futureDatePrefix = now.getTime() < date.getTime() ? "in" : "";
-      return ` ${futureDatePrefix} ${inUnit} ${unit}${
+      const output = ` ${futureDatePrefix} ${inUnit} ${unit}${
         inUnit === 1 ? "" : "s"
       } ${now.getTime() > date.getTime() ? "ago" : ""}`;
+      return output.trim(); // Trim leading and trailing spaces
     }
   }
 

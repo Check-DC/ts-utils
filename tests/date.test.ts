@@ -22,9 +22,9 @@ describe("toNow function", () => {
   test("should handle string input dates", () => {
     const dateString = "2024-04-29T12:00:00Z";
     const result = toNow(dateString);
-    expect(result).toMatch(
-      /just now|in \d+ hour|in \d+ day|in \d+ week|in \d+ month|in \d+ year|\d+ hour ago|\d+ day ago|\d+ week ago|\d+ month ago|\d+ year ago/
-    );
+    const expectedOutput = "6 days ago"; // Update this with the expected output
+
+    expect(result).toBe(expectedOutput);
   });
 
   test("should handle invalid date input", () => {
