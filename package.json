@@ -1,23 +1,29 @@
 {
   "name": "ts-utils",
   "version": "1.0.0",
-  "description": "",
+  "description": "A versatile TypeScript utility package that provides a collection of essential functions to enhance your TypeScript projects.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "types": "index.d.ts",
   "files": [
-  "dist"
+    "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsup"
+    "build": "tsup && node generate-readme.js",
+    "test": "jest --coverage"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
     "tsup": "^8.0.2",
     "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10"
   }
 }
