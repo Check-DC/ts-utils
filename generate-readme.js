@@ -6,6 +6,7 @@ const ejs = require("ejs");
 const tsDeclarationFile = "dist/index.d.ts";
 const readmeTemplateFile = "read-me-template.md";
 const readmeFile = "README.md";
+const initialReadmeFile = "README.md";
 
 // Read the TypeScript declaration file
 fs.promises
@@ -27,9 +28,19 @@ fs.promises
     fs.promises.writeFile(readmeFile, readmeContent, "utf8")
   )
   .then(() => console.log("README.md updated successfully!"))
-  .catch((err) => console.error(err, "README.md failed to update"));
+  .catch((err) => {
+    console.error(err, "README.md failed to update");
 
-// Function to parse the TypeScript declaration file and extract function details
+    // If there's an error, return the initial README.md file
+    return fs.promises
+      .readFile(initialReadmeFile, "utf8")
+      .then((initialReadmeContent) =>
+        fs.promises.writeFile(readmeFile, initialReadmeContent, "utf8")
+      )
+      .then(() => console.log("Initial README.md restored."));
+  });
+
+// Parse the TypeScript declaration file and extract function details
 function parseTypeScriptDeclarationFile(data) {
   const functionRegex = /declare const (\w+):/g;
   const descriptionRegex = /\/\*\*\n\s\* (.+?)\n\s\* @/g;
