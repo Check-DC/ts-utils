@@ -7,6 +7,7 @@ on:
       - feat/utils-setup
   pull_request:
     branches:
+      - main
       - feat/utils-setup
 
 jobs:
@@ -28,6 +29,9 @@ jobs:
       - name: Test
         run: npm test
 
+      - name: Build
+        run: npm run build
+
   generate-readme:
     needs: build
     runs-on: ubuntu-latest
@@ -47,6 +51,8 @@ jobs:
       - name: Generate README
         run: |
           node generate-readme.js
+          git config user.name "GitHub Actions"
+          git config user.email "github-actions@github.com"
           git add README.md
           git commit -m "chore: update README"
           git push
