@@ -37,18 +37,3 @@ export {
   toLowerCase,
   toUpperCase,
 } from "../src/string";
-
-// import * as stringUtils from "../src/string";
-// import * as arrayUtils from "../src/array";
-// import * as dateUtils from "../src/date";
-// import * as numberUtils from "../src/number";
-// import * as objectUtils from "../src/object";
-
-// index.ts
-// export const tsUtils = {
-//   ...stringUtils,
-//   ...arrayUtils,
-//   ...dateUtils,
-//   ...numberUtils,
-//   ...objectUtils,
-// };
