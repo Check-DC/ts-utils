@@ -4,9 +4,10 @@ on:
   push:
     branches:
       - main
+      - feat/utils-setup
   pull_request:
     branches:
-      - main
+      - feat/utils-setup
 
 jobs:
   build:
