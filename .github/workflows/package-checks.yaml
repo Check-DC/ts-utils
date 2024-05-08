@@ -31,28 +31,3 @@ jobs:
 
       - name: Build
         run: npm run build
-
-  generate-readme:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Use Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 20
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Generate README
-        run: |
-          node generate-readme.js
-          git config user.name "GitHub Actions"
-          git config user.email "github-actions@github.com"
-          git add README.md
-          git commit -m "chore: update README"
-          git push
