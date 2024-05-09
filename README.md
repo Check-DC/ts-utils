@@ -1,13 +1,13 @@
-# TS-Utils
+# CHECK-DC/TS-UTILS
 
 ## Overview
 
-The ts-utils is a versatile TypeScript utility package that provides a collection of useful functions for various tasks, including array manipulation, date formatting, string & number operations, and object handling. This package offers essential tools to enhance your TypeScript projects with ease.
+The Check-DC/TS-utils is a versatile TypeScript utility package that provides a collection of useful functions for various tasks, including array manipulation, date formatting, string & number operations, and object handling. This package offers essential tools to enhance your TypeScript projects with ease.
 Below is a brief overview of the main functions included in this package:
 
 ## Table of Contents
 
-- [TS-Utils](#ts-utils)
+- [CHECK-DC/TS-UTILS](#check-dc/ts-utils)
 - [Table of Contents](#table-of-contents)
 - [Utilities](#Functions)
 - [Installation](#Installation)
@@ -91,19 +91,19 @@ Below is a brief overview of the main functions included in this package:
 
 ## Installation
 
-To install the ts-utils package, you can use the following command:
+To install the Check-DC/TS-Utils package, you can use the following command:
 
 ```bash
-npm install @ts-utils
+npm install @check-dc/ts-utils
 ```
 
 or
 
 ```bash
-yarn add @ts-utils
+yarn add @check-dc/ts-utils
 ```
 
-This command will fetch and install the ts-utils package from the package registry, making it available for use in your project.
+This command will fetch and install the Check-DC/TS-utils package from the package registry, making it available for use in your project.
 
 ### Usage
 
@@ -111,11 +111,20 @@ Once you have the file in your project, simply import the utility you need using
 
 ```typescript
 // Import the specific method category you need
-import { randomStr, toUpperCase, toFullUrl } from "ts-utils/string.ts";
-import { formatNumber, parseNumber, addSeparators } from "ts-utils/number.ts";
+import { randomStr, toUpperCase, toFullUrl } from "check-dc/ts-utils/string.ts";
+import {
+  formatNumber,
+  parseNumber,
+  addSeparators,
+} from "check-dc/ts-utils/number.ts";
 
 // OR Import all utilities
-import { randomStr, toUpperCase, parseNumber, addSeparators } from "ts-utils";
+import {
+  randomStr,
+  toUpperCase,
+  parseNumber,
+  addSeparators,
+} from "check-dc/ts-utils";
 ```
 
 ## Contributing
