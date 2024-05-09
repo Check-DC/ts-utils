@@ -1,5 +1,5 @@
 {
-  "name": "@check-dc/ts-utils",
+  "name": "@check-engineering/ts-utils",
   "version": "1.0.0",
   "description": "A versatile TypeScript utility package that provides a collection of essential functions to enhance your TypeScript projects.",
   "main": "./dist/index.js",
