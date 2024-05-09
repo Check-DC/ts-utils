@@ -30,6 +30,11 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Clear npm cache
+        run: |
+          npm config set '//npm.pkg.github.com/:_authToken' "${{ secrets.NPM_TOKEN }}"
+          npm config set '//npm.pkg.github.com/:username' 'check-dc-dev'
+
       - name: Publish
         run: npm publish --access public
         env:
