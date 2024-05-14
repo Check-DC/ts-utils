@@ -53,8 +53,8 @@ jobs:
 
       - name: Login
         run: |
-          git config --global user.email tech@wearecheck.co
-          git config --global user.name Check-DC
+          git config --global user.email developer@check-dc.com
+          git config --global user.name check-dc-dev
 
       - name: Bump version
         run: |
