@@ -1,6 +1,7 @@
 # Table of contents
 
-* [Getting Started](README.md)
+* [Check-Enginering/TS-Utils](README.md)
+* [Getting Started](getting-started.md)
 * [Contributing](readme/contributing.md)
 * [Testing](readme/testing.md)
 * [Functions](readme/functions/README.md)
