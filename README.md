@@ -1,109 +1,110 @@
-# CHECK-ENGINEERING/TS-UTILS [![npm version](https://img.shields.io/npm/v/@check-engineering/ts-utils.svg)](https://www.npmjs.com/package/@check-engineering/ts-utils)
+# Sample Utils
 
 ## Overview
 
-The Check-Engineering/TS-Utils is a versatile TypeScript utility package that provides a collection of useful functions for various tasks, including array manipulation, date formatting, string & number operations, and object handling. This package offers essential tools to enhance your TypeScript projects with ease.
-Below is a brief overview of the main functions included in this package:
+The cpb-utils is a versatile TypeScript utility package that provides a collection of useful functions for various tasks, including array manipulation, date formatting, string & number operations, and object handling. This package offers essential tools to enhance your TypeScript projects with ease. Below is a brief overview of the main functions included in this package:
 
 ## Table of Contents
 
-- [CHECK-ENGINEERING/TS-UTILS](#check-engineering/ts-utils)
-- [Table of Contents](#table-of-contents)
-- [Utilities](#Functions)
-- [Installation](#Installation)
-- [Usage](#Usage)
-- [Contributing](#contributing)
-- [License](#license)
+* [Sample Utils](./#cpb-utils)
+* [Table of Contents](./#table-of-contents)
+* [Utilities](./#Functions)
+* [Installation](./#Installation)
+* [Usage](./#Usage)
+* [Contributing](./#contributing)
+* [License](./#license)
 
 ## Functions
 
-`isArr`: Check if the given variable is an array
+`capitalize`: Converts the first letter of a string to uppercase
 
-`isArrEmpty`: Check if the given array is empty
+`toUpperCase`: Converts a string to uppercase
 
-`pushUniqueValue`: Pushes a unique value into an array if it doesn't already exist.
+`toLowerCase`: Converts a string to lowercase
 
-`pushOrUpdate`: Pushes a unique value into an array if it doesn't already exist.
+`trim`: Removes whitespace from the beginning and end of a string.
 
-`toNow`: Calculate the relative time difference between a given date and the current date
+`removeUnderscores`: Removes underscore(s) from a string
 
-`formatDate`: Convert a date into a formatted string based on the specified format
+`replaceAll`: Replaces all occurrences of a string in given input.
 
-`fromNow`: Calculate the relative time difference between a given date and the current date for future events
+`initials`: Generates initials from a given string.
 
-`toFixed`: Format a number to a specified precision
+`defaultOptions`: Generates a random string based on the given options.
 
-`parseNumber`: Parse a number string or number and return its float, integer, and sign
+`randomStr`: Generates a random string based on the given options.
 
-`parseFormat`: Parse a formatted string and extract its sign, base, decimals, and unit
+`generateUuid`: Generates a Universally Unique Identifier (UUID).
 
-`addUnit`: Add a unit to a number based on the provided configuration
+`isArr`: Pushes a unique value into an array if it doesn't already exist.
 
-`addSeparators`: Add thousands and decimal separators to a number string based on the provided configuration
+`isArrEmpty`: Get the time difference between the provided date and the current time.
 
-`formatNumber`: Format a number or string into a specified format with separators and units
+`pushUniqueValue`: Formats a date string or Date object to the specified date-time format.
 
-`ensureNumber`: Ensures the input value is a valid number, returning the minimum value if the input is invalid
+`pushOrUpdate`: Format a number to a fixed precision
 
-`numberEmptyState`: Handles the display of numeric values, providing a fallback format for "empty" or invalid values.
+`toNow`: Parse a number string or number and return its float, integer, and sign
 
-`parseJSON`: Parse a JSON string into a specified type, with a default value if parsing fails or input is null
+`formatDate`: Parse a formatted string and extract its sign, base, decimals, and unit
 
-`deepClone`: Create a deep clone of a given object, including nested objects and arrays
+`fromNow`: Add a unit to a number based on the provided configuration
 
-`parseNumValues`: Recursively parse the values of an object, converting any numeric string values to numbers
+`toFixed`: Add thousands and decimal separators to a number string based on the provided configuration
 
-`removeEmptyKeys`: Recursively remove keys with null, undefined, or empty string values from an object
+`parseNumber`: Ensures the input value is a number and optionally enforces a minimum value.
 
-`sanitizeQuery`: Sanitize a query object by removing empty keys and parsing numeric string values to numbers
+`parseFormat`: @param {string} value
 
-`removeKeys`: Remove specified keys from an object, returning a new object with the keys removed
+`addUnit`: Cleanly parse a string to JSON object value if an error is discovered
 
-`renameKey`: Rename a key in an object from an old name to a new name
+`addSeparators`: Deep clones an object without keeping reference
 
-`renameKeys`: Rename multiple keys in an object from old names to new names
+`formatNumber`: Parse all number values in an object
 
-`sortByKeyLength`: Sort an object's key-value pairs by the length of the values, with ties broken by the lexicographic order of the keys
+`ensureNumber`: Removes empty keys in an object
 
-`querylize`: Convert an object into a query string for URL parameters
+`numberEmptyState`: Cleans a query object for empty values and parse number values
 
-`parseNumericObj`: Convert numeric string values in an object to numbers, preserving non-numeric values
+`parseJSON`: Convert an object into the query version of itself
 
-`reserveKeys`: Create a new object containing only the specified keys from the original object
+`deepClone`:
 
-`hasKeysAndValues`: Check if an object has all the specified keys and if the values associated with those keys are not undefined or null
+`parseNumValues`: Converts the first letter of a string to uppercase
 
-`defaultOptions`: Create a new object with selected keys from the original object
+`removeEmptyKeys`: Converts a string to uppercase
 
-`randomStr`: Generate a random string based on specified options
+`sanitizeQuery`: Converts a string to lowercase
 
-`toUpperCase`: Convert a string to uppercase
+`removeKeys`: Removes whitespace from the beginning and end of a string.
 
-`toLowerCase`: Convert a string to lowercase
+`renameKey`: Removes underscore(s) from a string
 
-`toFullUrl`: Convert a partial URL to a full URL by adding missing components like protocol and domain
+`renameKeys`: Replaces all occurrences of a string in given input.
 
-`initials`: Generate the initials from a person's name
+`sortByKeyLength`: Generates initials from a given string.
 
-`generateUuid`: Generate a Universally Unique Identifier (UUID)
+`querylize`: Generates a random string based on the given options.
 
+`reserveKeys`: Generates a random string based on the given options.
 
+`hasKeysAndValues`: Generates a Universally Unique Identifier (UUID).
 
 ## Installation
 
-To install the Check-ENGINEERING/TS-Utils package, you can use the following command:
+To install the cpb-utils package, you can use the following command:
 
 ```bash
-npm install @check-engineering/ts-utils
+npm install @cpb-utils
 ```
 
 or
 
 ```bash
-yarn add @check-engineering/ts-utils
+yarn add @cpb-utils
 ```
 
-This command will fetch and install the check-engineering/ts-utils package from the package registry, making it available for use in your project.
+This command will fetch and install the cpb-utils package from the package registry, making it available for use in your project.
 
 ### Usage
 
@@ -111,11 +112,11 @@ Once you have the file in your project, simply import the utility you need using
 
 ```typescript
 // Import the specific method category you need
-import { randomStr, toUpperCase } from "check-engineering/ts-utils/string.ts";
-import { parseNumber, addUnit } from "check-engineering/ts-utils/number.ts";
+import { chunk, formatDate, capitalize } from "kam-utils1000/array.ts";
+import { roundNum, clampNum } from "kam-utils1000/number.ts";
 
 // OR Import all utilities
-import { randomStr, parseNumber, addUnit } from "check-engineering/ts-utils";
+import { formatDate, roundNum } from "kam-utils1000";
 ```
 
 ## Contributing
@@ -132,4 +133,4 @@ Please make sure to follow the existing code style and include tests for your ch
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute this software. Refer to the [LICENSE](LICENSE) file for more details.
+This project is licensed under the [MIT License](https://github.com/Kamsi-yonna/Check-package-beta/blob/main/LICENSE/README.md). You are free to use, modify, and distribute this software. Refer to the [LICENSE](https://github.com/Kamsi-yonna/Check-package-beta/blob/main/LICENSE/README.md) file for more details.
