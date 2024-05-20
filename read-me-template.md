@@ -2,19 +2,23 @@
 
 ## Overview
 
-The Check-Engineering/TS-Utils is a versatile TypeScript utility package that provides a collection of useful functions for various tasks, including array manipulation, date formatting, string & number operations, and object handling. This package offers essential tools to enhance your TypeScript projects with ease.
-For a complete overview about the package, we highly recommend you take a look at the [📘Documentation](https://kamsiyonna.gitbook.io/check-engineering-ts-utils).  
+The Check-Engineering/TS-Utils is a versatile TypeScript utility package that provides a collection of useful functions for various tasks, including array manipulation, date formatting, string & number operations, and object handling. This package offers essential tools to enhance your TypeScript projects with ease.  
 Below is a brief overview of the main functions included in this package:
 
 ## Table of Contents
 
 - [CHECK-ENGINEERING/TS-UTILS](#check-engineering/ts-utils)
 - [Table of Contents](#table-of-contents)
-- [Utilities](#Functions)
+- [Documentation](#Documentation)
+- [Functions](#Functions)
 - [Installation](#Installation)
 - [Usage](#Usage)
 - [Contributing](#contributing)
 - [License](#license)
+
+## Documentation
+
+For a comprehensive documentation, we highly recommend that you take a look at the [📘TS-Utils Documentation](https://kamsiyonna.gitbook.io/check-engineering-ts-utils), where each function and its usage are highlighted.
 
 ## Functions
 
