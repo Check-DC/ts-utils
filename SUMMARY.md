@@ -33,6 +33,7 @@
       * [renameKey](readme/functions/object-methods/renamekey.md)
       * [renameKeys](readme/functions/object-methods/renamekeys.md)
       * [sortByKeyLength](readme/functions/object-methods/sortbykeylength.md)
+      * [querylize](readme/functions/object-methods/querylize.md)
       * [parseNumericObj](readme/functions/object-methods/parsenumericobj.md)
       * [reserveKeys](readme/functions/object-methods/reservekeys.md)
       * [hasKeysAndValues](readme/functions/object-methods/haskeysandvalues.md)
