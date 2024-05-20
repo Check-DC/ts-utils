@@ -1,16 +1,16 @@
 # querylize
 
-**`querylize`**`(obj)`
+## **`querylize(obj)`**
 
 Converts an object into a query string for URL parameters. If the input object is null or undefined, it returns an empty string. This function is useful for constructing URL query strings from JavaScript objects.**Arguments**
 
 * `obj` (Record\<string, any> | undefined): The input object to be converted to a query string.
 
-**Returns**
+## **Returns**
 
 * `string`: The query string representation of the input object, e.g., `?age=20&height=10cm`.
 
-**Example**
+## **Example**
 
 ```typescript
 typescript
@@ -25,7 +25,7 @@ const params = {
 const queryString = querylize(params); // => ?age=30&name=Alice&height=170cm
 ```
 
-**Usage**
+## **Usage**
 
 ```typescript
 typescript
@@ -39,7 +39,7 @@ const data = {
 const query = querylize(data); // => ?key=value&category=general
 ```
 
-**Notes**
+## **Notes**
 
 * The `querylize` function is a convenient way to convert JavaScript objects into URL query strings.
 * It handles null or undefined input by returning an empty string, making it suitable for scenarios where the input object might be missing or empty.
