@@ -1,6 +1,6 @@
 {
   "name": "@check-engineering/ts-utils",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "A versatile TypeScript utility package that provides a collection of essential functions to enhance your TypeScript projects.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -22,6 +22,10 @@
     "ts-node": "^10.9.2",
     "tsup": "^8.0.2",
     "typescript": "^5.4.5"
+  },
+  "repository": {
+    "url": "https://github.com/check-dc/ts-utils.git",
+    "type": "git"
   },
   "dependencies": {
     "ejs": "^3.1.10"
