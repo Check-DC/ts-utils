@@ -18,7 +18,7 @@ Below is a brief overview of the main functions included in this package:
 
 ## Documentation
 
-For a comprehensive documentation, we highly recommend that you take a look at the [📘TS-Utils Documentation](https://kamsiyonna.gitbook.io/check-engineering-ts-utils), where each function and its usage are highlighted.
+For a comprehensive documentation, we highly recommend that you take a look at the [📘TS-Utils Documentation](https://check-engineering.gitbook.io/ts-utils), where each function and its usage are highlighted.
 
 ## Functions
 
