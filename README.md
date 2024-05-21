@@ -22,6 +22,8 @@ For a comprehensive documentation, we highly recommend that you take a look at t
 
 ## Functions
 
+### Array Methods
+
 `isArr`: Check if the given variable is an array
 
 `isArrEmpty`: Check if the given array is empty
@@ -30,11 +32,15 @@ For a comprehensive documentation, we highly recommend that you take a look at t
 
 `pushOrUpdate`: Pushes a unique value into an array if it doesn't already exist.
 
+### Date Methods
+
 `toNow`: Calculate the relative time difference between a given date and the current date
 
 `formatDate`: Convert a date into a formatted string based on the specified format
 
 `fromNow`: Calculate the relative time difference between a given date and the current date for future events
+
+### Number Methods
 
 `toFixed`: Format a number to a specified precision
 
@@ -51,6 +57,8 @@ For a comprehensive documentation, we highly recommend that you take a look at t
 `ensureNumber`: Ensures the input value is a valid number, returning the minimum value if the input is invalid
 
 `numberEmptyState`: Handles the display of numeric values, providing a fallback format for "empty" or invalid values.
+
+### Object Methods
 
 `parseJSON`: Parse a JSON string into a specified type, with a default value if parsing fails or input is null
 
@@ -80,6 +88,8 @@ For a comprehensive documentation, we highly recommend that you take a look at t
 
 `defaultOptions`: Create a new object with selected keys from the original object
 
+### String Methods
+
 `randomStr`: Generate a random string based on specified options
 
 `toUpperCase`: Convert a string to uppercase
@@ -91,8 +101,6 @@ For a comprehensive documentation, we highly recommend that you take a look at t
 `initials`: Generate the initials from a person's name
 
 `generateUuid`: Generate a Universally Unique Identifier (UUID)
-
-
 
 ## Installation
 
