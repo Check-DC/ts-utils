@@ -53,16 +53,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Login
-        run: |
-          git config --global user.email developer@check-dc.com
-          git config --global user.name check-dc-dev
-
-      - name: Bump version
-        run: |
-          npm version patch -m "Bump version to %s"
-          git push --follow-tags
-
       - name: Publish
         run: |
           npm publish --access public

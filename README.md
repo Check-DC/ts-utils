@@ -1,21 +1,28 @@
-# CHECK-ENGINEERING/TS-UTILS [![npm version](https://img.shields.io/npm/v/@check-engineering/ts-utils.svg)](https://www.npmjs.com/package/@check-engineering/ts-utils)
+# Check-Engineering/Ts-utils [![npm version](https://img.shields.io/npm/v/@check-engineering/ts-utils.svg)](https://www.npmjs.com/package/@check-engineering/ts-utils)
 
 ## Overview
 
-The Check-Engineering/TS-Utils is a versatile TypeScript utility package that provides a collection of useful functions for various tasks, including array manipulation, date formatting, string & number operations, and object handling. This package offers essential tools to enhance your TypeScript projects with ease.
+The Check-Engineering/TS-Utils is a versatile TypeScript utility package that provides a collection of useful functions for various tasks, including array manipulation, date formatting, string & number operations, and object handling. This package offers essential tools to enhance your TypeScript projects with ease.  
 Below is a brief overview of the main functions included in this package:
 
 ## Table of Contents
 
 - [CHECK-ENGINEERING/TS-UTILS](#check-engineering/ts-utils)
 - [Table of Contents](#table-of-contents)
-- [Utilities](#Functions)
+- [Documentation](#Documentation)
+- [Functions](#Functions)
 - [Installation](#Installation)
 - [Usage](#Usage)
 - [Contributing](#contributing)
 - [License](#license)
 
+## Documentation
+
+For a comprehensive documentation, we highly recommend that you take a look at the [📘TS-Utils Documentation](https://kamsiyonna.gitbook.io/check-engineering-ts-utils), where each function and its usage are highlighted.
+
 ## Functions
+
+### Array Methods
 
 `isArr`: Check if the given variable is an array
 
@@ -25,11 +32,15 @@ Below is a brief overview of the main functions included in this package:
 
 `pushOrUpdate`: Pushes a unique value into an array if it doesn't already exist.
 
+### Date Methods
+
 `toNow`: Calculate the relative time difference between a given date and the current date
 
 `formatDate`: Convert a date into a formatted string based on the specified format
 
 `fromNow`: Calculate the relative time difference between a given date and the current date for future events
+
+### Number Methods
 
 `toFixed`: Format a number to a specified precision
 
@@ -46,6 +57,8 @@ Below is a brief overview of the main functions included in this package:
 `ensureNumber`: Ensures the input value is a valid number, returning the minimum value if the input is invalid
 
 `numberEmptyState`: Handles the display of numeric values, providing a fallback format for "empty" or invalid values.
+
+### Object Methods
 
 `parseJSON`: Parse a JSON string into a specified type, with a default value if parsing fails or input is null
 
@@ -75,6 +88,8 @@ Below is a brief overview of the main functions included in this package:
 
 `defaultOptions`: Create a new object with selected keys from the original object
 
+### String Methods
+
 `randomStr`: Generate a random string based on specified options
 
 `toUpperCase`: Convert a string to uppercase
@@ -86,8 +101,6 @@ Below is a brief overview of the main functions included in this package:
 `initials`: Generate the initials from a person's name
 
 `generateUuid`: Generate a Universally Unique Identifier (UUID)
-
-
 
 ## Installation
 
