@@ -4,12 +4,12 @@
   "description": "A versatile TypeScript utility package that provides a collection of essential functions to enhance your TypeScript projects.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
-  "types": "index.d.ts",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsup && node generate-readme.js",
+    "build": "tsup src/index.ts --format cjs,esm --dts --out-dir dist && node generate-readme.js",
     "test": "jest --coverage"
   },
   "keywords": [],
