@@ -1,6 +1,6 @@
 {
   "name": "@check-engineering/ts-utils",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A versatile TypeScript utility package that provides a collection of essential functions to enhance your TypeScript projects.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
